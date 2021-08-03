@@ -30,27 +30,27 @@ class _MyAppState extends State<MyApp> {
     Item(
       headerIcon: Icons.fingerprint,
       headerValue: 'Quem eu sou?',
-      expandedValue: 'This is item number',
+      expandedValue: 'Oi, eu sou a Julia! :)\n Cursando Gestão de MKT em Mídias Digitais\nMãe de pet\nDisney Girl\nModa, filmes, desenhar, gadgets e minha casa',
     ),
     Item(
       headerIcon: Icons.favorite,
-      headerValue: 'No que eu acredito?',
-      expandedValue: 'This is item number',
+      headerValue: 'No que eu acredito',
+      expandedValue: 'Nós construímos nosso caminho\nDedicação\nAmor\nPropósito',
     ),
     Item(
       headerIcon: Icons.star_rate,
-      headerValue: 'Qual a minha aspiração?',
-      expandedValue: 'This is item number\nAnotherline',
+      headerValue: 'Minha aspiração',
+      expandedValue: 'Independência\nReconhecimento\nRealização',
     ),
     Item(
       headerIcon: Icons.extension,
-      headerValue: 'Qual o meu propósito?',
-      expandedValue: 'This is item number',
+      headerValue: 'Meu propósito',
+      expandedValue: '?\n Ikigai 生き甲斐 ',
     ),
     Item(
       headerIcon: Icons.lightbulb,
       headerValue: 'Oportunidade',
-      expandedValue: 'This is item number',
+      expandedValue: 'Esta é a oportunidade que me permitirá descobrir meu propósito e alcançar minhas aspirações, através de quem eu sou e do que eu acredito.',
     ),
   ];
 
@@ -59,46 +59,48 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.lightBlue,
-        body: SafeArea(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              CircleAvatar(
-                radius: 80.0,
-                backgroundImage: AssetImage('images/julia.jpg'),
-              ),
-              Text(
-                'Julia Romanow',
-                style: TextStyle(
-                  fontFamily: 'Pacifico',
-                  fontSize: 40.0,
-                  color: Colors.white,
-                  fontWeight: FontWeight.normal,
+        backgroundColor: Colors.purpleAccent,
+        body: SingleChildScrollView(
+          child: SafeArea(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircleAvatar(
+                  radius: 80.0,
+                  backgroundImage: AssetImage('images/julia.jpg'),
                 ),
-              ),
-              Text(
-                'ASPIRANTE À ESTAGIÁRIA',
-                style: TextStyle(
-                  fontFamily: 'SourceSansPro',
-                  color: Colors.lightBlue.shade100,
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 2.5,
+                Text(
+                  'Julia Romanow',
+                  style: TextStyle(
+                    fontFamily: 'Pacifico',
+                    fontSize: 40.0,
+                    color: Colors.white,
+                    fontWeight: FontWeight.normal,
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: 20.0,
-                width: 150.0,
-                child: Divider(
-                  color: Colors.lightBlue.shade100,
+                Text(
+                  'ASPIRANTE À ESTAGIÁRIA',
+                  style: TextStyle(
+                    fontFamily: 'SourceSansPro',
+                    color: Colors.purple.shade100,
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 2.5,
+                  ),
                 ),
-              ),
-              Container(
-                padding: EdgeInsets.symmetric(vertical: 4.0, horizontal: 16.0),
-                child: _buildPanel(),
-              ),
-            ],
+                SizedBox(
+                  height: 20.0,
+                  width: 150.0,
+                  child: Divider(
+                    color: Colors.purple.shade100,
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(vertical: 4.0, horizontal: 16.0),
+                  child: _buildPanel(),
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -122,12 +124,12 @@ class _MyAppState extends State<MyApp> {
             return ListTile(
               leading: Icon(
                   item.headerIcon,
-                  color: Colors.lightBlue,
+                  color: Colors.purple,
               ),
               title: Text(
                 item.headerValue,
                 style: TextStyle(
-                  color: Colors.lightBlue.shade900,
+                  color: Colors.purple.shade900,
                   fontFamily: 'SourceSansPro',
                   fontSize: 22.0,
                 ),
@@ -138,7 +140,7 @@ class _MyAppState extends State<MyApp> {
               title: Text(
                 item.expandedValue,
                 style: TextStyle(
-                  color: Colors.lightBlue.shade700,
+                  color: Colors.purple.shade700,
                   fontFamily: 'SourceSansPro',
                   fontSize: 18.0,
                 ),
